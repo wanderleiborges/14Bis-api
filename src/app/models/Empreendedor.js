@@ -2,6 +2,8 @@ const Sequelize = require("sequelize");
 
 const sequelize = require("../../config/database");
 
+const User = require("./User");
+
 const Empreendedor = sequelize.define("EMPREENDEDOR", {
   ID_EMPREENDEDOR: {
     type: Sequelize.INTEGER,
@@ -150,7 +152,6 @@ const Empreendedor = sequelize.define("EMPREENDEDOR", {
     type: Sequelize.INTEGER,
     allowNull: true,
   },
-
 });
 
 module.exports = Empreendedor;
