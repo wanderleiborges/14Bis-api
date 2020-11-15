@@ -12,7 +12,7 @@ const Empreendedor = sequelize.define("EMPREENDEDOR", {
     allowNull: false,
     references: {
       model: User,
-      key: "ID_USER",
+      key: "ID_USUARIO",
       deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE,
     },
   },
