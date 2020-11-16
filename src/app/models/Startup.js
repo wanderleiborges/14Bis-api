@@ -35,22 +35,7 @@ const Startup = sequelize.define("STARTUP", {
     allowNull: true,
   },
 
-  DESCR_CURTA: {
-    type: Sequelize.STRING,
-    allowNull: true,
-  },
-
-  DESCR_LONGA: {
-    type: Sequelize.STRING,
-    allowNull: true,
-  },
-
   CAMINHO_FOTO: {
-    type: Sequelize.STRING,
-    allowNull: true,
-  },
-
-  TAGS: {
     type: Sequelize.STRING,
     allowNull: true,
   },
@@ -97,37 +82,10 @@ const Startup = sequelize.define("STARTUP", {
 
   LINKEDIN: {
     type: Sequelize.STRING,
-    allowNull: true,
   },
 
   FACEBOOK: {
     type: Sequelize.STRING,
-    allowNull: true,
-  },
-
-  APPSTORE: {
-    type: Sequelize.STRING,
-    allowNull: true,
-  },
-
-  GOOGLEPLAY: {
-    type: Sequelize.STRING,
-    allowNull: true,
-  },
-
-  YOUTUBE: {
-    type: Sequelize.STRING,
-    allowNull: true,
-  },
-
-  INSTAGRAM: {
-    type: Sequelize.STRING,
-    allowNull: true,
-  },
-
-  CEP: {
-    type: Sequelize.STRING,
-    allowNull: false,
   },
 
   ENDERECO: {
@@ -144,7 +102,6 @@ const Startup = sequelize.define("STARTUP", {
     type: Sequelize.STRING,
     allowNull: false,
   },
-
 });
 
 module.exports = Startup;

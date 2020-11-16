@@ -6,32 +6,14 @@ class StartupController {
   static async postCreateStartup(req, res) {
     try {
       let {
-        ID_STARTUP,
-        NOME_STARTUP,
-        CPF,
-        DT_NASCIMENTO,
-        SEXO,
-        CEP,
-        ENDERECO,
-        UF,
-        CIDADE,
-        FONE_FIXO,
-        FONE_CELULAR,
-        LINKEDIN,
-        SKYPE,
-        GOOGLE_PLUS,
-        FACEBOOK,
-        ESCOLARIDADE,
-        ID_AREA_ATUACAO,
-        CURRICULO_RESUMIDO,
-        SN_RECEBER_NOVIDADES,
-        SN_RECEBER_NOTIF_SISTEMA,
-        SN_ATIVO,
-        CAMINHO_FOTO,
-        INSTAGRAM,
-        MEDIUM,
-        TWITTER,
-        HABILIDADES,
+        NOME_FANTASIA,
+        RAZAO_SOCIAL,
+        DT_FUNDACAO,
+        ID_SEGUIMENTO_SECUN,
+        ID_PUBLICO_ALVO,
+        ID_MOMENTO,
+        ID_TAMANHO_TIME,
+        ID_FATURAMENTO_ANUAL,
       } = req.body;
 
       const startup = {
@@ -70,7 +52,7 @@ class StartupController {
       const startupId = insertedStartup.ID_STARTUP;
 
       return res.json({
-        ID_STARTUP,
+        startupId,
       });
     } catch (error) {
       console.log(error);
@@ -94,7 +76,8 @@ class StartupController {
       });
 
       // serialized Startup
-      const startupSerialized = startup.length > 0 ? startup[0].dataValues : null;
+      const startupSerialized =
+        startup.length > 0 ? startup[0].dataValues : null;
 
       return res.json({ ...startupSerialized });
     } catch (error) {
